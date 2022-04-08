@@ -1,0 +1,152 @@
+.poster {
+  position: relative;
+}
+
+.poster-video {
+  width: 100%;
+  display: block;
+  height: 100vh;
+  object-fit: cover;
+}
+.poster-badge {
+  width: 100px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.poster-arrows {
+  position: absolute;
+  width: 25px;
+  bottom: 12px;
+  left: 50%;
+  margin-left: -12.5px;
+}
+.poster-arrows div {
+  background: url(../asset/arrow.png);
+  width: 25px;
+  height: 15px;
+  animation: fade 1.5s infinite linear;
+}
+.poster-arrows div:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.poster-arrows div:nth-child(3) {
+  animation-delay: 1s;
+}
+@keyframes fade {
+  50% {
+    opacity: 0;
+  }
+}
+
+.poster-d {
+  width: 540px;
+  height: 125px;
+  position: absolute;
+  left: 50%;
+  margin-left: -270px;
+  bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poster-d-sq {
+  width: 102px;
+}
+.poster-d-rec {
+  width: 160px;
+}
+.poster-d img {
+  display: block;
+  width: 100%;
+}
+.poster-qrcode {
+  position: relative;
+}
+.poster-qrcode img:last-child {
+  position: absolute;
+  border: 2px solid #475e7d;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  left: 50px;
+  top: 50px;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+
+.poster-d .switch img:last-child {
+  display: none;
+}
+.poster-d .switch:hover img:last-child {
+  display: block;
+}
+.poster-d .switch:hover img:first-child {
+  display: none;
+}
+
+.poster-pc {
+  width: 111px;
+}
+
+.poster-play {
+  background: url(../asset/play-bg.png);
+  width: 356px;
+  height: 76px;
+  position: absolute;
+  left: 50%;
+  margin-left: -178px;
+  bottom: 220px;
+}
+.poster-play-button {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
+.poster-play-button:hover {
+  background: transparent;
+}
+.poster-play-button::before {
+  content: '';
+  position: absolute;
+  background: url(../asset/play-inner.png);
+  width: 28px;
+  height: 28px;
+  left: 50%;
+  top: 50%;
+  margin-left: -14px;
+  margin-top: -14px;
+}
+.poster-play-button:hover::before {
+  background-position: 0 -28px;
+}
+
+.poster-modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+  z-index: 666;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.poster-modal video {
+  width: 896px;
+  height: 504px;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -448px;
+  margin-top: -252px;
+  box-shadow: 0 0 5px #000;
+}
